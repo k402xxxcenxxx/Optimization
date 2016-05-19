@@ -7,8 +7,6 @@ DataManager::DataManager()
 
 bool DataManager::LoadEquationData()
 {
-	std::istringstream stringSpliter;
-
 	std::fstream fin;
 	//開啟檔案，傳入open函數的參數有兩個，欲開起的檔案名稱，開啟檔案的模式參數(這邊std::ios::in為讀取(輸入)狀態)
 	fin.open(FileName, std::ios::in);
@@ -21,18 +19,20 @@ bool DataManager::LoadEquationData()
 	{
 		//定義讀取檔案字串暫存變數
 		std::string tempSring;
+		//定義暫存表示式
+		Expression tempExpression;
 
-		std::vector<std::string> subString;
+		std::vector<std::string> variableStrings;
 
 		//執行讀檔迴圈，並在讀到檔案結尾時結束
+		//每一行都是一個式子
 		while (!fin.eof())
 		{
+
 			//從檔案讀取字串
 			fin >> tempSring;
 
 			std::cout << "original : " << tempSring << std::endl;
-
-			subString.clear();
 
 			//對原始式子做切割
 			std::istringstream f = std::istringstream(tempSring);
@@ -46,19 +46,19 @@ bool DataManager::LoadEquationData()
 				std::getline(f2, s, '-');
 
 				//'+'的
-				subString.push_back(s);
+				variableStrings.push_back(s);
 
 				//如果還可以切，就是'-'的
 				while (std::getline(f2, s, '-')) {
-					subString.push_back("-" + s);
+					variableStrings.push_back("-" + s);
 				}
 			}
 
-			//理論上現在subString是存所有項(常數、變數)的字串
+			//理論上現在variableStrings是存所有項(常數、變數)的字串
 
 			//現在要從所有項次找出係數
-			for each (std::string subEquations in subString) {
-				stringSpliter = std::istringstream(subEquations);
+			for each (std::string variableString in variableStrings) {
+				std::istringstream f = std::istringstream(variableString);
 
 				double coefficient = 1.0;//預設係數為1
 				double powerX = 1.0;//預設次方數為1
@@ -66,7 +66,7 @@ bool DataManager::LoadEquationData()
 				std::string variableX = "";
 				std::string variableY = "";
 
-				while (std::getline(stringSpliter, buf, '*')) {
+				while (std::getline(f, buf, '*')) {
 					//現在已經用'*'隔開了，隔開的字串存在buf
 
 					std::istringstream f2 = std::istringstream(buf);
@@ -99,33 +99,45 @@ bool DataManager::LoadEquationData()
 				}
 
 				if (variableX == "" && variableY =="") {
-					std::cout << "常數項 : " << coefficient << std::endl;
+					//std::cout << "常數項 : " << coefficient << std::endl;
+					tempExpression.add(variable(coefficient));
 				}
 				else if(variableX != "" && variableY == ""){
-					std::cout << "變數 : "<< coefficient << " * " << variableX << " ^ " << powerX << std::endl;
+					//std::cout << "變數 : "<< coefficient << " * " << variableX << " ^ " << powerX << std::endl;
+					tempExpression.add(variable(coefficient,powerX,0));
 				}
 				else if (variableX == "" && variableY != "") {
-					std::cout << "變數 : " << coefficient << " * " << variableY << " ^ " << powerY << std::endl;
+					//std::cout << "變數 : " << coefficient << " * " << variableY << " ^ " << powerY << std::endl;
+					tempExpression.add(variable(coefficient,0.0, powerY));
 				}
 				else if (variableX != "" && variableY != "") {
-					std::cout << "變數 : " << coefficient << " * " << variableX << " ^ " << powerX << " * " << variableY << " ^ " << powerY << std::endl;
+					//std::cout << "變數 : " << coefficient << " * " << variableX << " ^ " << powerX << " * " << variableY << " ^ " << powerY << std::endl;
+					tempExpression.add(variable(coefficient, powerX, powerY));
 				}
-
 			}
 
-			//解析到向量標記"V"
-			//Equations.push_back(tempSring);
 			//遞增EquationIndex，標記到當前讀取向量ID
 			EquationIndex++;
+			Expressions.push_back(tempExpression);
 
+			std::cout << EquationIndex<< " : " << tempExpression.toString() << std::endl;
+
+			NewtonMethod N;
+			N.Newton(tempExpression,Point2d(0,0));
+
+			tempExpression.clear();
+			variableStrings.clear();
 		}
+
+		
+
 		return true;
 	}
 }
 
-std::vector<std::string> DataManager::GetEquations()
+std::vector<Expression> DataManager::GetExpressions()
 {
-	return Equations;
+	return Expressions;
 }
 
 void DataManager::SetFileName(std::string fileName)

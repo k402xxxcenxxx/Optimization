@@ -1,8 +1,12 @@
 #pragma once
+#include <string>
+#include <sstream>
+#include <iostream>
 public class variable
 {
 public:
 	variable();
+	variable(double c, double myPowerX = 0.0, double myPowerY = 0.0);
 	~variable();
 
 	enum symbol
@@ -21,9 +25,13 @@ public:
 	//¹ïs°µ°¾·L¤À
 	variable PartialDifferentiation(symbol s);
 
+	double getValue(double x, double y);
+
 	void zerolization();
 
 	bool isConstant();
+
+	std::string toString();
 
 private:
 
