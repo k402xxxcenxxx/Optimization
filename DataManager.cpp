@@ -122,8 +122,12 @@ bool DataManager::LoadEquationData()
 
 			std::cout << EquationIndex<< " : " << tempExpression.toString() << std::endl;
 
-			NewtonMethod N;
-			N.Newton(tempExpression,Point2d(0,0));
+			
+			//CGMethod CG;
+			//std::string *s = new std::string();
+			//CG.CG(tempExpression, Point2d(0.3,0.0), s);
+			
+			//std::cout << *s << std::endl;
 
 			tempExpression.clear();
 			variableStrings.clear();

@@ -1,0 +1,43 @@
+﻿Build started 2016/6/16 下午 09:20:51.
+     1>Project "D:\KEN\Course\Engineering Mathematics\Project2\Optimization(Shader)\Optimization\Optimization\Optimization.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"D:\KEN\Course\Engineering Mathematics\Project2\Optimization(Shader)\Optimization\Release\HKOGLPanel.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
+         MyForm.cpp
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(841): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(842): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(843): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(854): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(863): warning C4018: '<': signed/unsigned mismatch
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(867): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(904): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(905): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(906): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(917): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(926): warning C4018: '<': signed/unsigned mismatch
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(930): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(970): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(971): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(972): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(983): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(992): warning C4018: '<': signed/unsigned mismatch
+     1>d:\ken\course\engineering mathematics\project2\optimization(shader)\optimization\optimization\MyForm.h(996): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\KEN\Course\Engineering Mathematics\Project2\Optimization(Shader)\Optimization\Debug\Optimization.exe" /INCREMENTAL /NOLOGO glew32.lib OPENGL32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\Optimization.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\KEN\Course\Engineering Mathematics\Project2\Optimization(Shader)\Optimization\Debug\Optimization.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\DataManager.obj
+         Debug\DotNetUitilities.obj
+         Debug\Expression.obj
+         Debug\GMethod.obj
+         Debug\LoadShaders.obj
+         Debug\MyForm.obj
+         Debug\NewtonMethod.obj
+         Debug\Point2d.obj
+         Debug\powellMethod.obj
+         Debug\QNewton.obj
+         Debug\ShaderManager.obj
+         Debug\variable.obj
+         "Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
+         Optimization.vcxproj -> D:\KEN\Course\Engineering Mathematics\Project2\Optimization(Shader)\Optimization\Debug\Optimization.exe
+     1>Done Building Project "D:\KEN\Course\Engineering Mathematics\Project2\Optimization(Shader)\Optimization\Optimization\Optimization.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.77

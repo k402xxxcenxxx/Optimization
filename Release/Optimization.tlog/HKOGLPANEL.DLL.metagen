@@ -1,0 +1,126 @@
+  HKOGLPanel.HKOGLPanelControl.bmp - Embedded, ContainedInManifestFile, 
+  HKOGLPanel.HKOGLPanelControl.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly HKOGLPanel, Version=1.0.*, Culture=不因語言而異 (不因國別而異): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class HKOGLPanel.SimpleTypeConverter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.ExpandableObjectConverter
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ConvertTo(ITypeDescriptorContext, CultureInfo, Object, Type): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class HKOGLPanel.HKCOGLPanelPixelFormat: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    PIXELBITS Stencil_Buffer_Bits 'get set' : 
+    PIXELBITS Accumu_Buffer_Bits 'get set' : 
+    PIXELBITS Alpha_Buffer_Bits 'get set' : 
+    PIXELBITS Z_Buffer_Bits 'get set' : 
+    PIXELBITS Color_Buffer_Bits 'get set' : 
+  Methods:
+    Color_Bits(): PrivateScope, Public, HideBySig
+    Depth_Bits(): PrivateScope, Public, HideBySig
+    Aplha_Bits(): PrivateScope, Public, HideBySig
+    Accum_Bits(): PrivateScope, Public, HideBySig
+    Stencil_Bits(): PrivateScope, Public, HideBySig
+    get_Color_Buffer_Bits(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color_Buffer_Bits(PIXELBITS): PrivateScope, Public, HideBySig, SpecialName
+    get_Z_Buffer_Bits(): PrivateScope, Public, HideBySig, SpecialName
+    set_Z_Buffer_Bits(PIXELBITS): PrivateScope, Public, HideBySig, SpecialName
+    get_Alpha_Buffer_Bits(): PrivateScope, Public, HideBySig, SpecialName
+    set_Alpha_Buffer_Bits(PIXELBITS): PrivateScope, Public, HideBySig, SpecialName
+    get_Accumu_Buffer_Bits(): PrivateScope, Public, HideBySig, SpecialName
+    set_Accumu_Buffer_Bits(PIXELBITS): PrivateScope, Public, HideBySig, SpecialName
+    get_Stencil_Buffer_Bits(): PrivateScope, Public, HideBySig, SpecialName
+    set_Stencil_Buffer_Bits(PIXELBITS): PrivateScope, Public, HideBySig, SpecialName
+Struct HKOGLPanel.HKCOGLPanelPixelFormat+PIXELBITS: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    PIXELBITS BITS_0 = 0 : Public, Static, Literal, HasDefault
+    PIXELBITS BITS_2 = 1 : Public, Static, Literal, HasDefault
+    PIXELBITS BITS_4 = 2 : Public, Static, Literal, HasDefault
+    PIXELBITS BITS_8 = 3 : Public, Static, Literal, HasDefault
+    PIXELBITS BITS_16 = 4 : Public, Static, Literal, HasDefault
+    PIXELBITS BITS_24 = 5 : Public, Static, Literal, HasDefault
+    PIXELBITS BITS_32 = 6 : Public, Static, Literal, HasDefault
+Class HKOGLPanel.CameraPropertyEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(PROPERTYTYPE): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    get_Property(): PrivateScope, Public, HideBySig
+Struct HKOGLPanel.CameraPropertyEventArgs+PROPERTYTYPE: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    PROPERTYTYPE CAMERA_TYPE = 0 : Public, Static, Literal, HasDefault
+    PROPERTYTYPE FOV_VALUE = 1 : Public, Static, Literal, HasDefault
+    PROPERTYTYPE NEAR_VALUE = 2 : Public, Static, Literal, HasDefault
+    PROPERTYTYPE FAR_VALUE = 3 : Public, Static, Literal, HasDefault
+Class HKOGLPanel.CameraPropertyEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, CameraPropertyEventArgs): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Object, CameraPropertyEventArgs, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class HKOGLPanel.HKCOGLPanelCameraSetting: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Far 'get set' : 
+    Double Near 'get set' : 
+    Double Fov 'get set' : 
+    CAMERATYPE Type 'get set' : 
+  Events:
+    HKOGLPanel.CameraPropertyEventHandler PropertyChanged: SpecialName
+  Methods:
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(CAMERATYPE): PrivateScope, Public, HideBySig, SpecialName
+    get_Fov(): PrivateScope, Public, HideBySig, SpecialName
+    set_Fov(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Near(): PrivateScope, Public, HideBySig, SpecialName
+    set_Near(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Far(): PrivateScope, Public, HideBySig, SpecialName
+    set_Far(Double): PrivateScope, Public, HideBySig, SpecialName
+    add_PropertyChanged(CameraPropertyEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PropertyChanged(CameraPropertyEventHandler): PrivateScope, Public, HideBySig, SpecialName
+Struct HKOGLPanel.HKCOGLPanelCameraSetting+CAMERATYPE: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CAMERATYPE PERSPECTIVE = 0 : Public, Static, Literal, HasDefault
+    CAMERATYPE ORTHOGRAPHIC = 1 : Public, Static, Literal, HasDefault
+Class HKOGLPanel.HKOGLPanelControl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.UserControl
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    HKOGLPanel.HKCOGLPanelCameraSetting Camera_Setting 'get set' : 
+    HKOGLPanel.HKCOGLPanelPixelFormat Pixel_Format 'get set' : 
+  Methods:
+    get_Pixel_Format(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pixel_Format(HKCOGLPanelPixelFormat): PrivateScope, Public, HideBySig, SpecialName
+    get_Camera_Setting(): PrivateScope, Public, HideBySig, SpecialName
+    set_Camera_Setting(HKCOGLPanelCameraSetting): PrivateScope, Public, HideBySig, SpecialName
+    Display_PixelFormat(): PrivateScope, Public, HideBySig
+Class HKOGLPanel.HKOGLPanelControlDesigner: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Design.ControlDesigner
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct HKOGLPanel.BOOLTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    HKOGLPanel.BOOLTYPE False = 0 : Public, Static, Literal, HasDefault
+    HKOGLPanel.BOOLTYPE True = 1 : Public, Static, Literal, HasDefault

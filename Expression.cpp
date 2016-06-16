@@ -42,7 +42,10 @@ Expression Expression::PartialDifferentiation(variable::symbol s) {
 std::string Expression::toString() {
 	std::string s = "";
 	for each (variable v in variables) {
+		if (v.coefficient > 0)
+			s += "+";
 		s += v.toString();
+		
 		s += " ";
 	}
 	return s;

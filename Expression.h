@@ -18,7 +18,7 @@ public:
 
 	double getConstant();
 
-	double getValue(double x,double y);
+	double getValue(double x,double y = 0.0);
 
 	std::string toString();
 

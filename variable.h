@@ -22,8 +22,17 @@ public:
 	//y的次方數
 	double powerY;
 
+
 	//對s做偏微分
 	variable PartialDifferentiation(symbol s);
+
+	variable &operator*=(variable v) {
+		return variable(coefficient * v.coefficient, powerX + v.powerX, powerY + v.powerY);
+	}
+
+	variable &operator^(double v) {
+		return variable(std::pow(coefficient ,v), powerX + v, powerY + v);
+	}
 
 	double getValue(double x, double y);
 

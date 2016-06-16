@@ -5,7 +5,6 @@
 #include <string>
 #include <sstream>
 #include "Expression.h"
-#include "NewtonMethod.h"
 
 //定義控管資料class
 class DataManager
